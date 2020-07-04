@@ -1,0 +1,5 @@
+name: 'Compile Mermaid'
+description: 'Compile Mermaid markdown files inline'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
