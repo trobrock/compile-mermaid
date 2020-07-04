@@ -6,6 +6,7 @@ WORKDIR /mmdc
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
+COPY puppeteer-config.json ./
 COPY Makefile ./
 
 WORKDIR /action
