@@ -12,5 +12,5 @@ COPY Makefile ./
 
 
 WORKDIR /action
-ENTRYPOINT [ "make", "-f /mmdc/Makefile" ]
+ENTRYPOINT [ "make", "-f", "/mmdc/Makefile" ]
 CMD [ "clean", "diagrams" ]
