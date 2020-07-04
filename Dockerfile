@@ -1,4 +1,6 @@
-FROM node:12
+FROM buildkite/puppeteer
+
+RUN apt-get update && apt-get install make
 
 WORKDIR /mmdc
 COPY package.json ./
