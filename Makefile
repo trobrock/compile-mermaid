@@ -2,7 +2,7 @@
 
 SOURCES = $(shell find . -name "*.mmd")
 OBJECTS = $(SOURCES:.mmd=.png)
-MERMAID = ./node_modules/.bin/mmdc
+MERMAID = /mmdc/node_modules/.bin/mmdc
 
 diagrams: $(OBJECTS)
 

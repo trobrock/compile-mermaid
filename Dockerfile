@@ -1,11 +1,16 @@
 FROM node:12-alpine
 
-WORKDIR /action
-
 RUN apk add make
-RUN npm install @mermaid-js/mermaid-cli
+
+WORKDIR /mmdc
+COPY package.json ./
+COPY package-lock.json ./
+
+RUN npm install
 
 COPY Makefile ./
 
-ENTRYPOINT [ "make" ]
+
+WORKDIR /action
+ENTRYPOINT [ "make", "-f /mmdc/Makefile" ]
 CMD [ "clean", "diagrams" ]
